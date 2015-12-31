@@ -68,10 +68,10 @@ class BootstrapPagerNode(Node):
             except VariableDoesNotExist:
                 kwargs[argname] = None
 
-        previous_label = str(kwargs.get("previous_label", "Previous Page"))
-        next_label = str(kwargs.get("next_label", "Next Page"))
-        previous_title = str(kwargs.get("previous_title", "Previous Page"))
-        next_title = str(kwargs.get("next_title", "Next Page"))
+        previous_label = unicode(kwargs.get("previous_label", "Previous Page"))
+        next_label = unicode(kwargs.get("next_label", "Next Page"))
+        previous_title = unicode(kwargs.get("previous_title", "Previous Page"))
+        next_title = unicode(kwargs.get("next_title", "Next Page"))
 
         url_view_name = kwargs.get("url_view_name", None)
         if url_view_name is not None:
